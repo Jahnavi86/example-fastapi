@@ -1,4 +1,4 @@
-name: Build and Deploy get_code
+name: Build and Deploy Code
 
 on: [push, pull_request]
 
@@ -10,7 +10,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install python version 3.9
         uses: actions/setup-python@v2
-        with: python-version: "3.9"
+        with: 
+          python-version: "3.9"
       - name: update pip
         run: python -m pip install --upgrade pip
       - name: install all dependencies
